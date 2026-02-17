@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- SEO Meta Tags -->
+    <title>VloraCode - Expert Web & Mobile App Development</title>
+    <meta name="description"
+        content="VloraCode specializes in creating cutting-edge web and mobile applications. Transform your ideas into digital reality with our expert development team.">
+    <meta name="keywords"
+        content="web development, mobile app development, UI/UX design, VloraCode, software development">
+    <meta name="author" content="VloraCode">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://vloracode.com/">
+    <meta property="og:title" content="VloraCode - Expert Web & Mobile App Development">
+    <meta property="og:description"
+        content="Transform your ideas into digital reality with our expert development team.">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://vloracode.com/">
+    <meta property="twitter:title" content="VloraCode - Expert Web & Mobile App Development">
+    <meta property="twitter:description"
+        content="Transform your ideas into digital reality with our expert development team.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="./logos/favicon.svg">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Cairo:wght@400;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+
+    <!-- ========== HEADER ========== -->
+    <header class="header" id="header">
+        <div class="container">
+            <a href="#home" class="logo">
+                <svg class="logo-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#7C3AED;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#A78BFA;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <circle cx="50" cy="25" r="15" fill="url(#logoGradient)" />
+                    <circle cx="30" cy="75" r="15" fill="url(#logoGradient)" />
+                    <circle cx="70" cy="75" r="15" fill="url(#logoGradient)" />
+                    <path d="M 50 40 L 35 60 M 50 40 L 65 60" stroke="url(#logoGradient)" stroke-width="8"
+                        stroke-linecap="round" />
+                    <circle cx="50" cy="52" r="6" fill="white" />
+                    <circle cx="35" cy="68" r="6" fill="white" />
+                    <circle cx="65" cy="68" r="6" fill="white" />
+                </svg>
+                <span class="logo-text">VloraCode</span>
+            </a>
+
+            <nav class="nav">
+                <ul class="nav-links">
+                    <li><a href="#home" class="nav-link active" data-i18n="nav.home">Home</a></li>
+                    <li><a href="#services" class="nav-link" data-i18n="nav.services">Services</a></li>
+                    <li><a href="#technologies" class="nav-link" data-i18n="nav.technologies">Technologies</a></li>
+                    <li><a href="#portfolio" class="nav-link" data-i18n="nav.portfolio">Portfolio</a></li>
+                    <li><a href="#contact" class="nav-link" data-i18n="nav.contact">Contact</a></li>
+                </ul>
+
+                <div class="nav-controls">
+                    <button class="btn btn-icon" id="theme-toggle" aria-label="Toggle theme">
+                        <span class="theme-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                class="icon">
+                                <path fill-rule="evenodd"
+                                    d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 003.463-.69.75.75 0 01.981.98 10.503 10.503 0 01-9.694 6.46c-5.799 0-10.5-4.701-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 01.818.162z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </span>
+                    </button>
+
+                    <button class="btn btn-icon" id="lang-toggle" aria-label="Toggle language">
+                        <span class="lang-text" style="font-weight: 600;">AR</span>
+                    </button>
+
+                    <button class="btn btn-icon" id="mobile-menu-btn" aria-label="Toggle menu" style="display: none;">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="icon">
+                            <path fill-rule="evenodd"
+                                d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="menu-overlay" id="menu-overlay"></div>
+
+    <!-- Mobile Menu -->
+    <nav class="mobile-menu" id="mobile-menu">
+        <ul class="mobile-menu-links">
+            <li><a href="#home" data-i18n="nav.home">Home</a></li>
+            <li><a href="#services" data-i18n="nav.services">Services</a></li>
+            <li><a href="#technologies" data-i18n="nav.technologies">Technologies</a></li>
+            <li><a href="#portfolio" data-i18n="nav.portfolio">Portfolio</a></li>
+            <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- ========== HERO SECTION ========== -->
+        <section class="hero-section" id="home">
+            <div class="hero-bg"></div>
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text" data-animate="fadeInUp">
+                        <h1 class="hero-title">
+                            <span data-i18n="hero.title">Transform Your Ideas Into</span><br>
+                            <span class="text-gradient" data-i18n="hero.titleHighlight">Digital Reality</span>
+                        </h1>
+                        <p class="hero-subtitle" data-i18n="hero.subtitle">
+                            Expert web and mobile application development solutions tailored to elevate your business to
+                            new heights.
+                        </p>
+                        <div class="hero-cta">
+                            <a href="#contact" class="btn btn-primary btn-lg" data-i18n="hero.cta1">Get Started</a>
+                            <a href="#portfolio" class="btn btn-outline btn-lg" data-i18n="hero.cta2">View Portfolio</a>
+                        </div>
+                    </div>
+                    <div class="hero-visual" data-animate="fadeIn" data-delay="200">
+                        <div class="hero-animation">
+                            <div class="float-element float-1"></div>
+                            <div class="float-element float-2"></div>
+                            <div class="float-element float-3"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-wave">
+                <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M0,64L48,69.3C96,75,192,85,288,80C384,75,480,53,576,48C672,43,768,53,864,58.7C960,64,1056,64,1152,58.7C1248,53,1344,43,1392,37.3L1440,32L1440,120L1392,120C1344,120,1248,120,1152,120C1056,120,960,120,864,120C768,120,672,120,576,120C480,120,384,120,288,120C192,120,96,120,48,120L0,120Z"
+                        fill="var(--bg-primary)" />
+                </svg>
+            </div>
+        </section>
+
+        <!-- ========== SERVICES SECTION ========== -->
+        <section class="section services-section" id="services">
+            <div class="container">
+                <div class="section-header text-center" data-animate="fadeInUp">
+                    <h2 class="section-title" data-i18n="services.title">Our Services</h2>
+                    <p class="section-subtitle" data-i18n="services.subtitle">Comprehensive development solutions for
+                        modern businesses</p>
+                </div>
+
+                <div class="services-grid">
+                    <div class="service-card card card-glass" data-animate="fadeInUp" data-delay="0">
+                        <div class="service-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                class="icon-xl">
+                                <path
+                                    d="M11.25 4.533A9.707 9.707 0 006 3a9.735 9.735 0 00-3.25.555.75.75 0 00-.5.707v14.25a.75.75 0 001 .707A8.237 8.237 0 016 18.75c1.995 0 3.823.707 5.25 1.886V4.533zM12.75 20.636A8.214 8.214 0 0118 18.75c.966 0 1.89.166 2.75.47a.75.75 0 001-.708V4.262a.75.75 0 00-.5-.707A9.735 9.735 0 0018 3a9.707 9.707 0 00-5.25 1.533v16.103z" />
+                            </svg>
+                        </div>
+                        <h3 class="service-title" data-i18n="services.web.title">Web Development</h3>
+                        <p class="service-description" data-i18n="services.web.description">Custom web applications
+                            built with cutting-edge technologies for optimal performance and user experience.</p>
+                    </div>
+
+                    <div class="service-card card card-glass" data-animate="fadeInUp" data-delay="100">
+                        <div class="service-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                class="icon-xl">
+                                <path d="M10.5 18.75a.75.75 0 000 1.5h3a.75.75 0 000-1.5h-3z" />
+                                <path fill-rule="evenodd"
+                                    d="M8.625.75A3.375 3.375 0 005.25 4.125v15.75a3.375 3.375 0 003.375 3.375h6.75a3.375 3.375 0 003.375-3.375V4.125A3.375 3.375 0 0015.375.75h-6.75zM7.5 4.125C7.5 3.504 8.004 3 8.625 3H9.75v.375c0 .621.504 1.125 1.125 1.125h2.25c.621 0 1.125-.504 1.125-1.125V3h1.125c.621 0 1.125.504 1.125 1.125v15.75c0 .621-.504 1.125-1.125 1.125h-6.75A1.125 1.125 0 017.5 19.875V4.125z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                        <h3 class="service-title" data-i18n="services.mobile.title">Mobile Apps</h3>
+                        <p class="service-description" data-i18n="services.mobile.description">Native and cross-platform
+                            mobile applications that deliver seamless experiences across all devices.</p>
+                    </div>
+
+                    <div class="service-card card card-glass" data-animate="fadeInUp" data-delay="200">
+                        <div class="service-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                class="icon-xl">
+                                <path fill-rule="evenodd"
+                                    d="M20.599 1.5c-.376 0-.743.111-1.055.32l-5.08 3.385a18.747 18.747 0 00-3.471 2.987 10.04 10.04 0 014.815 4.815 18.748 18.748 0 002.987-3.472l3.386-5.079A1.902 1.902 0 0020.599 1.5zm-8.3 14.025a18.76 18.76 0 001.896-1.207 8.026 8.026 0 00-4.513-4.513A18.75 18.75 0 008.475 11.7l-.278.5a5.26 5.26 0 013.601 3.602l.502-.278zM6.75 13.5A3.75 3.75 0 003 17.25a1.5 1.5 0 01-1.601 1.497.75.75 0 00-.7 1.123 5.25 5.25 0 009.8-2.62 3.75 3.75 0 00-3.75-3.75z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                        <h3 class="service-title" data-i18n="services.uiux.title">UI/UX Design</h3>
+                        <p class="service-description" data-i18n="services.uiux.description">Beautiful, intuitive
+                            interfaces designed with user-centric approach to maximize engagement.</p>
+                    </div>
+
+                    <div class="service-card card card-glass" data-animate="fadeInUp" data-delay="300">
+                        <div class="service-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                class="icon-xl">
+                                <path fill-rule="evenodd"
+                                    d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm11.378-3.917c-.89-.777-2.366-.777-3.255 0a.75.75 0 01-.988-1.129c1.454-1.272 3.776-1.272 5.23 0 1.513 1.324 1.513 3.518 0 4.842a3.75 3.75 0 01-.837.552c-.676.328-1.028.774-1.028 1.152v.75a.75.75 0 01-1.5 0v-.75c0-1.279 1.06-2.107 1.875-2.502.182-.088.351-.199.503-.331.83-.727.83-1.857 0-2.584zM12 18a.75.75 0 100-1.5.75.75 0 000 1.5z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                        <h3 class="service-title" data-i18n="services.consulting.title">Tech Consulting</h3>
+                        <p class="service-description" data-i18n="services.consulting.description">Strategic technology
+                            guidance to help you make informed decisions for your digital transformation.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== WHY CHOOSE US SECTION ========== -->
+        <section class="section why-us-section">
+            <div class="container">
+                <div class="section-header text-center" data-animate="fadeInUp">
+                    <h2 class="section-title" data-i18n="whyUs.title">Why Choose VloraCode?</h2>
+                    <p class="section-subtitle" data-i18n="whyUs.subtitle">What sets us apart from the competition</p>
+                </div>
+
+                <div class="why-us-grid">
+                    <div class="why-us-card" data-animate="fadeInUp" data-delay="0">
+                        <div class="why-us-number">01</div>
+                        <h3 data-i18n="whyUs.expertise.title">Deep Technical Expertise</h3>
+                        <p data-i18n="whyUs.expertise.description">Years of experience with cutting-edge technologies
+                            and best practices.</p>
+                    </div>
+
+                    <div class="why-us-card" data-animate="fadeInUp" data-delay="100">
+                        <div class="why-us-number">02</div>
+                        <h3 data-i18n="whyUs.quality.title">Quality Focused</h3>
+                        <p data-i18n="whyUs.quality.description">We never compromise on code quality, performance, and
+                            security.</p>
+                    </div>
+
+                    <div class="why-us-card" data-animate="fadeInUp" data-delay="200">
+                        <div class="why-us-number">03</div>
+                        <h3 data-i18n="whyUs.support.title">Ongoing Support</h3>
+                        <p data-i18n="whyUs.support.description">Continuous support and maintenance to ensure your
+                            success.</p>
+                    </div>
+
+                    <div class="why-us-card" data-animate="fadeInUp" data-delay="300">
+                        <div class="why-us-number">04</div>
+                        <h3 data-i18n="whyUs.innovation.title">Innovation Driven</h3>
+                        <p data-i18n="whyUs.innovation.description">Always staying ahead with the latest trends and
+                            technologies.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== TECHNOLOGIES SECTION ========== -->
+        <section class="section technologies-section" id="technologies">
+            <div class="container">
+                <div class="section-header text-center" data-animate="fadeInUp">
+                    <h2 class="section-title" data-i18n="technologies.title">Technologies We Master</h2>
+                    <p class="section-subtitle" data-i18n="technologies.subtitle">Powerful tools to build exceptional
+                        applications</p>
+                </div>
+
+                <div class="tech-grid">
+                    <div class="tech-category" data-animate="fadeInUp" data-delay="0">
+                        <h3 class="tech-category-title" data-i18n="technologies.web">Web Technologies</h3>
+                        <div class="tech-items">
+                            <div class="tech-item">React</div>
+                            <div class="tech-item">Vue.js</div>
+                            <div class="tech-item">Angular</div>
+                            <div class="tech-item">Next.js</div>
+                            <div class="tech-item">TypeScript</div>
+                            <div class="tech-item">Tailwind CSS</div>
+                        </div>
+                    </div>
+
+                    <div class="tech-category" data-animate="fadeInUp" data-delay="100">
+                        <h3 class="tech-category-title" data-i18n="technologies.mobile">Mobile Technologies</h3>
+                        <div class="tech-items">
+                            <div class="tech-item">React Native</div>
+                            <div class="tech-item">Flutter</div>
+                            <div class="tech-item">Swift</div>
+                            <div class="tech-item">Kotlin</div>
+                        </div>
+                    </div>
+
+                    <div class="tech-category" data-animate="fadeInUp" data-delay="200">
+                        <h3 class="tech-category-title" data-i18n="technologies.backend">Backend & Database</h3>
+                        <div class="tech-items">
+                            <div class="tech-item">Node.js</div>
+                            <div class="tech-item">.NET</div>
+                            <div class="tech-item">Python</div>
+                            <div class="tech-item">Laravel</div>
+                            <div class="tech-item">PostgreSQL</div>
+                            <div class="tech-item">MongoDB</div>
+                            <div class="tech-item">Redis</div>
+                        </div>
+                    </div>
+
+                    <div class="tech-category" data-animate="fadeInUp" data-delay="300">
+                        <h3 class="tech-category-title" data-i18n="technologies.cloud">Cloud & DevOps</h3>
+                        <div class="tech-items">
+                            <div class="tech-item">AWS</div>
+                            <div class="tech-item">Azure</div>
+                            <div class="tech-item">Docker</div>
+                            <div class="tech-item">Kubernetes</div>
+                            <div class="tech-item">CI/CD</div>
+                            <div class="tech-item">Terraform</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== PROJECT SPECIALTIES SECTION ========== -->
+        <section class="section portfolio-section" id="portfolio">
+            <div class="container">
+                <div class="section-header text-center" data-animate="fadeInUp">
+                    <h2 class="section-title" data-i18n="portfolio.title">Our Project Specialties</h2>
+                    <p class="section-subtitle" data-i18n="portfolio.subtitle">Proven expertise in delivering complex
+                        systems</p>
+                </div>
+
+                <div class="portfolio-grid">
+                    <!-- E-commerce Platform -->
+                    <div class="portfolio-item card" data-animate="fadeInUp" data-delay="0">
+                        <div class="portfolio-image">
+                            <div class="portfolio-placeholder"
+                                style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);"></div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3 class="portfolio-title" data-i18n="portfolio.project1.title">E-commerce Platform</h3>
+                            <p class="portfolio-description" data-i18n="portfolio.project1.description">Complete online
+                                shopping solutions with payment integration, inventory management, and mobile apps</p>
+                            <div class="portfolio-tags">
+                                <span class="tag">Web</span>
+                                <span class="tag">Flutter</span>
+                                <span class="tag">UI/UX</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- E-learning System -->
+                    <div class="portfolio-item card" data-animate="fadeInUp" data-delay="100">
+                        <div class="portfolio-image">
+                            <div class="portfolio-placeholder"
+                                style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);"></div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3 class="portfolio-title" data-i18n="portfolio.project2.title">E-learning System</h3>
+                            <p class="portfolio-description" data-i18n="portfolio.project2.description">Comprehensive
+                                educational platforms with course management, assessments, and student tracking</p>
+                            <div class="portfolio-tags">
+                                <span class="tag">Web</span>
+                                <span class="tag">Flutter</span>
+                                <span class="tag">UI/UX</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Clinical Management System -->
+                    <div class="portfolio-item card" data-animate="fadeInUp" data-delay="200">
+                        <div class="portfolio-image">
+                            <div class="portfolio-placeholder"
+                                style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);"></div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3 class="portfolio-title" data-i18n="portfolio.project3.title">Clinical Management System
+                            </h3>
+                            <p class="portfolio-description" data-i18n="portfolio.project3.description">Advanced
+                                healthcare systems for patient records, appointments, and medical workflows</p>
+                            <div class="portfolio-tags">
+                                <span class="tag">Web</span>
+                                <span class="tag">Flutter</span>
+                                <span class="tag">UI/UX</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Learning Center Management -->
+                    <div class="portfolio-item card" data-animate="fadeInUp" data-delay="300">
+                        <div class="portfolio-image">
+                            <div class="portfolio-placeholder"
+                                style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);"></div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3 class="portfolio-title" data-i18n="portfolio.project4.title">Learning Center Management
+                            </h3>
+                            <p class="portfolio-description" data-i18n="portfolio.project4.description">Complete
+                                training center solutions with scheduling, attendance, and certification management</p>
+                            <div class="portfolio-tags">
+                                <span class="tag">Web</span>
+                                <span class="tag">Flutter</span>
+                                <span class="tag">UI/UX</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- POS System -->
+                    <div class="portfolio-item card" data-animate="fadeInUp" data-delay="400">
+                        <div class="portfolio-image">
+                            <div class="portfolio-placeholder"
+                                style="background: linear-gradient(135deg, #30cfd0 0%, #330867 100%);"></div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3 class="portfolio-title" data-i18n="portfolio.project5.title">POS System</h3>
+                            <p class="portfolio-description" data-i18n="portfolio.project5.description">Advanced point
+                                of sale solutions for retail and restaurant businesses with inventory and sales tracking
+                            </p>
+                            <div class="portfolio-tags">
+                                <span class="tag">Web</span>
+                                <span class="tag">Flutter</span>
+                                <span class="tag">UI/UX</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Inventory Management System -->
+                    <div class="portfolio-item card" data-animate="fadeInUp" data-delay="500">
+                        <div class="portfolio-image">
+                            <div class="portfolio-placeholder"
+                                style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);"></div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3 class="portfolio-title" data-i18n="portfolio.project6.title">Inventory Management System
+                            </h3>
+                            <p class="portfolio-description" data-i18n="portfolio.project6.description">Comprehensive
+                                warehouse and stock management with real-time tracking and automated reordering</p>
+                            <div class="portfolio-tags">
+                                <span class="tag">Web</span>
+                                <span class="tag">Flutter</span>
+                                <span class="tag">UI/UX</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== CONTACT SECTION ========== -->
+        <section class="section contact-section" id="contact">
+            <div class="container">
+                <div class="section-header text-center" data-animate="fadeInUp">
+                    <h2 class="section-title" data-i18n="contact.title">Let's Build Something Amazing</h2>
+                    <p class="section-subtitle" data-i18n="contact.subtitle">Get in touch with us to discuss your
+                        project</p>
+                </div>
+
+                <div class="contact-content">
+                    <form class="contact-form" id="contact-form" data-animate="fadeInUp" data-delay="100">
+                        <div class="form-group">
+                            <label for="name" class="form-label" data-i18n="contact.name">Your Name</label>
+                            <input type="text" id="name" name="name" class="form-input" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email" class="form-label" data-i18n="contact.email">Your Email</label>
+                            <input type="email" id="email" name="email" class="form-input" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message" class="form-label" data-i18n="contact.message">Tell us about your
+                                project</label>
+                            <textarea id="message" name="message" class="form-input form-textarea" rows="5"
+                                required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-lg" data-i18n="contact.send">Send
+                            Message</button>
+                    </form>
+
+                    <div class="contact-info" data-animate="fadeInUp" data-delay="200">
+                        <div class="contact-info-item">
+                            <div class="contact-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                    class="icon-lg">
+                                    <path fill-rule="evenodd"
+                                        d="M1.5 4.5a3 3 0 013-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 01-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 006.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 011.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 01-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 data-i18n="contact.phoneLabel">Phone</h4>
+                                <p>+201025824895</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-item">
+                            <div class="contact-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                    class="icon-lg">
+                                    <path
+                                        d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z" />
+                                    <path
+                                        d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 data-i18n="contact.emailLabel">Email</h4>
+                                <p>mustafa45salem@gmail.com</p>
+                            </div>
+                        </div>
+
+                       <!-- <div class="contact-info-item">
+                            <div class="contact-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                    class="icon-lg">
+                                    <path fill-rule="evenodd"
+                                        d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 00-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 002.682 2.282 16.975 16.975 0 001.145.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 data-i18n="contact.officeLabel">Office</h4>
+                                <p data-i18n="contact.officeAddress">123 Innovation Street<br>Tech City, TC 12345</p>
+                            </div>
+                        </div>-->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="#home" class="logo">
+                        <svg class="logo-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="logoGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#7C3AED;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#A78BFA;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                            <circle cx="50" cy="25" r="15" fill="url(#logoGradient2)" />
+                            <circle cx="30" cy="75" r="15" fill="url(#logoGradient2)" />
+                            <circle cx="70" cy="75" r="15" fill="url(#logoGradient2)" />
+                            <path d="M 50 40 L 35 60 M 50 40 L 65 60" stroke="url(#logoGradient2)" stroke-width="8"
+                                stroke-linecap="round" />
+                            <circle cx="50" cy="52" r="6" fill="white" />
+                            <circle cx="35" cy="68" r="6" fill="white" />
+                            <circle cx="65" cy="68" r="6" fill="white" />
+                        </svg>
+                        <span class="logo-text">VloraCode</span>
+                    </a>
+                    <p class="footer-tagline" data-i18n="footer.tagline">Building tomorrow's digital experiences today
+                    </p>
+                </div>
+
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4 data-i18n="footer.quickLinks">Quick Links</h4>
+                        <ul>
+                            <li><a href="#home" data-i18n="nav.home">Home</a></li>
+                            <li><a href="#services" data-i18n="nav.services">Services</a></li>
+                            <li><a href="#portfolio" data-i18n="nav.portfolio">Portfolio</a></li>
+                            <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4 data-i18n="footer.services">Services</h4>
+                        <ul>
+                            <li><a href="#services" data-i18n="services.web.title">Web Development</a></li>
+                            <li><a href="#services" data-i18n="services.mobile.title">Mobile Apps</a></li>
+                            <li><a href="#services" data-i18n="services.uiux.title">UI/UX Design</a></li>
+                            <li><a href="#services" data-i18n="services.consulting.title">Tech Consulting</a></li>
+                        </ul>
+                    </div>
+
+                   <!--<div class="footer-column">
+                        <h4 data-i18n="footer.connect">Connect With Us</h4>
+                        <div class="social-links">
+                            <a href="#" aria-label="Facebook" class="social-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                    class="icon">
+                                    <path
+                                        d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" />
+                                </svg>
+                            </a>
+                            <a href="#" aria-label="Twitter" class="social-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                    class="icon">
+                                    <path
+                                        d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
+                                </svg>
+                            </a>
+                            <a href="#" aria-label="LinkedIn" class="social-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                    class="icon">
+                                    <path
+                                        d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z" />
+                                </svg>
+                            </a>
+                            <a href="#" aria-label="GitHub" class="social-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                    class="icon">
+                                    <path
+                                        d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.220-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>-->  
+                </div> 
+            </div>
+
+            <div class="footer-bottom">
+                <p data-i18n="footer.copyright">© 2026 VloraCode. All rights reserved.</p>
+                <p>
+                    <span data-i18n="footer.madeWith">Made with</span>
+                    <span style="color: #EF4444;">❤</span>
+                    <span data-i18n="footer.by">by VloraCode Team</span>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="./js/theme.js"></script>
+    <script src="./js/language.js"></script>
+    <script src="./js/animations.js"></script>
+</body>
+
+</html>
