@@ -26,13 +26,10 @@ class ThemeManager {
     }
 
     /**
-     * Get user's preferred theme from system
+     * Get user's preferred theme
      */
     getPreferredTheme() {
-        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-            return 'dark';
-        }
-        return 'light';
+        return 'dark'; // Dark mode as default
     }
 
     /**

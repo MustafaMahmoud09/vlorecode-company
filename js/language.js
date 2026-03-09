@@ -27,11 +27,10 @@ class LanguageManager {
     }
 
     /**
-     * Get default language (can be based on browser language)
+     * Get default language
      */
     getDefaultLanguage() {
-        const browserLang = navigator.language || navigator.userLanguage;
-        return browserLang.startsWith('ar') ? 'ar' : 'en';
+        return 'ar'; // Arabic as default
     }
 
     /**
@@ -73,6 +72,12 @@ class LanguageManager {
                     cta1: "Get Started",
                     cta2: "View Portfolio"
                 },
+                stats: {
+                    projects: "Projects Delivered",
+                    clients: "Happy Clients",
+                    years: "Years Experience",
+                    satisfaction: "Client Satisfaction"
+                },
                 services: {
                     title: "Our Services",
                     subtitle: "Comprehensive development solutions for modern businesses",
@@ -91,6 +96,10 @@ class LanguageManager {
                     consulting: {
                         title: "Tech Consulting",
                         description: "Strategic technology guidance to help you make informed decisions for your digital transformation."
+                    },
+                    desktop: {
+                        title: "Desktop Apps",
+                        description: "Powerful, high-performance cross-platform desktop applications for Windows, macOS, and Linux."
                     }
                 },
                 whyUs: {
@@ -122,8 +131,8 @@ class LanguageManager {
                     cloud: "Cloud & DevOps"
                 },
                 portfolio: {
-                    title: "Our Project Specialties",
-                    subtitle: "Proven expertise in delivering complex systems",
+                    title: "Our Service Specialties",
+                    subtitle: "Proven expertise in delivering complex high-end systems",
                     viewProject: "View Project",
                     project1: {
                         title: "E-commerce Platform",
@@ -150,18 +159,52 @@ class LanguageManager {
                         description: "Comprehensive warehouse and stock management with real-time tracking and automated reordering"
                     }
                 },
+                portfolioSlider: {
+                    title: "Our Real Projects",
+                    subtitle: "Real work, real results — see what we've built",
+                    meta: {
+                        platform: "Platform",
+                        backend: "Backend",
+                        type: "Type"
+                    },
+                    project1: {
+                        title: "Mulhim – E-Learning Platform",
+                        description: "We engineer world-class digital learning ecosystems that bridge the gap between education and technology. Key features include fully bilingual (AR/EN) content delivery, interactive video modules, enterprise-grade automated examination & grading systems, and real-time performance analytics for students and administrators.",
+                        platform: "Web + Mobile",
+                        type: "E-Learning"
+                    },
+                    project2: {
+                        title: "Harvest – Car Marketplace",
+                        description: "Our team delivers scalable, high-conversion mobile commerce solutions designed to dominate niche markets. This service includes integrated secure digital wallets, intelligent multi-parameter search algorithms, real-time inventory synchronization, and a seamless end-to-end encrypted transaction flow built with Flutter.",
+                        platform: "Mobile (Flutter)",
+                        type: "E-commerce"
+                    },
+                    project3: {
+                        title: "MediSupport – Smart Booking & Clinic Management",
+                        description: "We specialize in developing sophisticated clinic reservation systems and medical management platforms. Our solution streamlines patient flows with an automated booking engine, real-time doctor availability calendars, SMS/WhatsApp appointment reminders, and digital patient queue management to ensure a zero-wait experience.",
+                        platform: "Mobile (Flutter)",
+                        type: "HealthTech"
+                    },
+                    project4: {
+                        title: "Center Learning Management",
+                        description: "We streamline institutional operations with enterprise-grade management software that eliminates administrative bottlenecks. Features include automated attendance tracking, dynamic financial reporting, integrated parent-teacher portals, and comprehensive academic performance heatmaps.",
+                        platform: "Mobile (Flutter)",
+                        type: "EdTech Management"
+                    }
+                },
                 contact: {
-                    title: "Let's Build Something Amazing",
-                    subtitle: "Get in touch with us to discuss your project",
+                    title: "Let's Build Something Amazing Together",
+                    subtitle: "Get in touch with us to discuss your custom service",
                     name: "Your Name",
                     email: "Your Email",
-                    message: "Tell us about your project",
+                    message: "Tell us about the service you need",
                     send: "Send Message",
                     sending: "Sending...",
                     success: "Message sent successfully!",
                     error: "Failed to send message. Please try again.",
                     phoneLabel: "Phone",
                     emailLabel: "Email",
+                    whatsappLabel: "WhatsApp",
                     officeLabel: "Office",
                     officeAddress: "123 Innovation Street\nTech City, TC 12345"
                 },
@@ -190,6 +233,12 @@ class LanguageManager {
                     cta1: "ابدأ الآن",
                     cta2: "عرض الأعمال"
                 },
+                stats: {
+                    projects: "مشروع مُنجز",
+                    clients: "عميل سعيد",
+                    years: "سنوات خبرة",
+                    satisfaction: "رضا العملاء"
+                },
                 services: {
                     title: "خدماتنا",
                     subtitle: "حلول تطوير شاملة للأعمال الحديثة",
@@ -208,6 +257,10 @@ class LanguageManager {
                     consulting: {
                         title: "الاستشارات التقنية",
                         description: "إرشادات تقنية استراتيجية لمساعدتك على اتخاذ قرارات مستنيرة للتحول الرقمي."
+                    },
+                    desktop: {
+                        title: "تطبيقات سطح المكتب",
+                        description: "تطبيقات سطح مكتب قوية وعالية الأداء تعمل على مختلف الأنظمة (Windows, macOS, Linux)."
                     }
                 },
                 whyUs: {
@@ -239,8 +292,8 @@ class LanguageManager {
                     cloud: "السحابة والعمليات"
                 },
                 portfolio: {
-                    title: "تخصصاتنا في المشاريع",
-                    subtitle: "خبرة مثبتة في تقديم الأنظمة المعقدة",
+                    title: "تخصصاتنا الخدمية",
+                    subtitle: "خبرة مثبتة في تقديم أنظمة تقنية عالية الجودة",
                     viewProject: "عرض المشروع",
                     project1: {
                         title: "منصة التجارة الإلكترونية",
@@ -267,6 +320,39 @@ class LanguageManager {
                         description: "إدارة شاملة للمستودعات والمخزون مع التتبع في الوقت الفعلي وإعادة الطلب التلقائي"
                     }
                 },
+                portfolioSlider: {
+                    title: "مشاريعنا الحقيقية",
+                    subtitle: "عمل حقيقي، نتائج حقيقية — شاهد ما قمنا ببنائه",
+                    meta: {
+                        platform: "المنصة",
+                        backend: "الخلفية",
+                        type: "النوع"
+                    },
+                    project1: {
+                        title: "ملهم – منصة تعليم إلكتروني",
+                        description: "نحن نقوم بهندسة نظم تعليمية رقمية عالمية المستوى تسد الفجوة بين التعليم والتكنولوجيا. تشمل المميزات الرئيسية: تقديم محتوى ثنائي اللغة بالكامل (عربي/إنجليزي)، وحدات فيديو تفاعلية، أنظمة رائدة للأتمتة في الامتحانات والتقييم، وتحليلات أداء فورية للطلاب والإداريين.",
+                        platform: "ويب + جوال",
+                        type: "تعليم إلكتروني"
+                    },
+                    project2: {
+                        title: "هارفست – سوق السيارات",
+                        description: "يقدم فريقنا حلول تجارة إلكترونية عبر الجوال تتميز بقابلية التوسع ومعدلات تحويل عالية، مصممة للهيمنة على الأسواق المتخصصة. تشمل هذه الخدمة: محافظ رقمية آمنة مدمجة، خوارزميات بحث ذكية متعددة المعايير، مزامنة المخزون في الوقت الفعلي، وتدفق معاملات مشفر بالكامل من البداية للنهاية.",
+                        platform: "تطبيق جوال (Flutter)",
+                        type: "تجارة إلكترونية"
+                    },
+                    project3: {
+                        title: "MediSupport – نظام الحجز الذكي وإدارة العيادات",
+                        description: "نحن متخصصون في تطوير أنظمة حجز عيادات طبية متطورة ومنصات إدارة صحية. تعمل حلولنا على تنظيم تدفق المرضى من خلال محرك حجز آلي، جداول مواعيد للأطباء في الوقت الفعلي، تنبيهات تلقائية للمواعيد عبر SMS وواتساب، وإدارة رقمية لقوائم الانتظار لضمان تجربة خالية من التأخير.",
+                        platform: "تطبيق جوال (Flutter)",
+                        type: "تقنية صحية"
+                    },
+                    project4: {
+                        title: "نظام إدارة المراكز التعليمية",
+                        description: "نعمل على تبسيط العمليات المؤسسية من خلال برامج إدارة على مستوى المؤسسات تقضي على الاختناقات الإدارية. تشمل الميزات: تتبع الحضور الآلي، تقارير مالية ديناميكية، بوابات متكاملة للتواصل بين الآباء والمعلمين، وخرائط حرارية شاملة للأداء الأكاديمي.",
+                        platform: "تطبيق جوال (Flutter)",
+                        type: "إدارة تكنولوجيا التعليم"
+                    }
+                },
                 contact: {
                     title: "لنبني شيئاً رائعاً معاً",
                     subtitle: "تواصل معنا لمناقشة مشروعك",
@@ -279,6 +365,7 @@ class LanguageManager {
                     error: "فشل إرسال الرسالة. يرجى المحاولة مرة أخرى.",
                     phoneLabel: "الهاتف",
                     emailLabel: "البريد الإلكتروني",
+                    whatsappLabel: "واتساب",
                     officeLabel: "المكتب",
                     officeAddress: "123 شارع الابتكار\nالمدينة التقنية، TC 12345"
                 },

@@ -13,6 +13,12 @@
     "cta1": "Get Started",
     "cta2": "View Portfolio"
   },
+  "stats": {
+    "projects": "Projects Delivered",
+    "clients": "Happy Clients",
+    "years": "Years Experience",
+    "satisfaction": "Client Satisfaction"
+  },
   "services": {
     "title": "Our Services",
     "subtitle": "Comprehensive development solutions for modern businesses",
@@ -31,6 +37,10 @@
     "consulting": {
       "title": "Tech Consulting",
       "description": "Strategic technology guidance to help you make informed decisions for your digital transformation."
+    },
+    "desktop": {
+      "title": "Desktop Apps",
+      "description": "Powerful, high-performance cross-platform desktop applications for Windows, macOS, and Linux."
     }
   },
   "whyUs": {
@@ -62,8 +72,8 @@
     "cloud": "Cloud & DevOps"
   },
   "portfolio": {
-    "title": "Our Project Specialties",
-    "subtitle": "Proven expertise in delivering complex systems",
+    "title": "Our Service Specialties",
+    "subtitle": "Proven expertise in delivering complex high-end systems",
     "viewProject": "View Project",
     "project1": {
       "title": "E-commerce Platform",
@@ -90,18 +100,52 @@
       "description": "Comprehensive warehouse and stock management with real-time tracking and automated reordering"
     }
   },
+  "portfolioSlider": {
+    "title": "Our Real Projects",
+    "subtitle": "Real work, real results — see what we've built",
+    "meta": {
+      "platform": "Platform",
+      "backend": "Backend",
+      "type": "Type"
+    },
+    "project1": {
+      "title": "Mulhim – E-Learning Platform",
+      "description": "We engineer world-class digital learning ecosystems that bridge the gap between education and technology. Key features include fully bilingual (AR/EN) content delivery, interactive video modules, enterprise-grade automated examination & grading systems, and real-time performance analytics for students and administrators.",
+      "platform": "Web + Mobile",
+      "type": "E-Learning"
+    },
+    "project2": {
+      "title": "Harvest – Car Marketplace",
+      "description": "Our team delivers scalable, high-conversion mobile commerce solutions designed to dominate niche markets. This service includes integrated secure digital wallets, intelligent multi-parameter search algorithms, real-time inventory synchronization, and a seamless end-to-end encrypted transaction flow built with Flutter.",
+      "platform": "Mobile (Flutter)",
+      "type": "E-commerce"
+    },
+    "project3": {
+      "title": "MediSupport – Smart Booking & Clinic Management",
+      "description": "We specialize in developing sophisticated clinic reservation systems and medical management platforms. Our solution streamlines patient flows with an automated booking engine, real-time doctor availability calendars, SMS/WhatsApp appointment reminders, and digital patient queue management to ensure a zero-wait experience.",
+      "platform": "Mobile (Flutter)",
+      "type": "HealthTech"
+    },
+    "project4": {
+      "title": "Center Learning Management",
+      "description": "We streamline institutional operations with enterprise-grade management software that eliminates administrative bottlenecks. Features include automated attendance tracking, dynamic financial reporting, integrated parent-teacher portals, and comprehensive academic performance heatmaps.",
+      "platform": "Mobile (Flutter)",
+      "type": "EdTech Management"
+    }
+  },
   "contact": {
-    "title": "Let's Build Something Amazing",
-    "subtitle": "Get in touch with us to discuss your project",
+    "title": "Let's Build Something Amazing Together",
+    "subtitle": "Get in touch with us to discuss your custom service",
     "name": "Your Name",
     "email": "Your Email",
-    "message": "Tell us about your project",
+    "message": "Tell us about the service you need",
     "send": "Send Message",
     "sending": "Sending...",
     "success": "Message sent successfully!",
     "error": "Failed to send message. Please try again.",
     "phoneLabel": "Phone",
     "emailLabel": "Email",
+    "whatsappLabel": "WhatsApp",
     "officeLabel": "Office",
     "officeAddress": "123 Innovation Street\nTech City, TC 12345"
   },
